@@ -3,3 +3,4 @@ mod 'puppetlabs/inifile', :latest
 mod 'puppetlabs/postgresql', :latest
 mod 'puppetlabs/firewall', :latest
 mod 'puppetlabs/stdlib', :latest
+mod 'puppetlabs/concat', :latest
