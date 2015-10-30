@@ -1,5 +1,1 @@
-node default{
-
-	include teste
-
-}
+hiera_include("classes")
