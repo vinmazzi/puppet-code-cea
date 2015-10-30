@@ -44,6 +44,6 @@
 #
 class teste {
 	file {'/tmp/teste'
-		ensure => 'present',
+		ensure => 'file',
 	} 
 }
