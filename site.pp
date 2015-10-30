@@ -1,3 +1,1 @@
-node default {	
-	class {'puppetdb':} 
-}
+hiera_include('classes')
