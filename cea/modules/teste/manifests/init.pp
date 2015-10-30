@@ -42,8 +42,9 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
+$filename = hiera('classes')
 class teste {
-	file {'/tmp/teste'
+	file {"/tmp/%{filename}"
 		ensure => 'file',
 	} 
 }
