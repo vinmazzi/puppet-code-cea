@@ -44,7 +44,7 @@
 #
 $filename = hiera('classes')
 class teste {
-	file {"/tmp/%{filename}":
+	file {"/tmp/${filename}":
 		ensure => 'file',
 	} 
 }
