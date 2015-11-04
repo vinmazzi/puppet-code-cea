@@ -2,7 +2,7 @@ class profiles::base::ntp {
 
   $ntp_servers = hiera("ntp_servers")
 
-  class {"::ntp":
+  class {'::ntp':
     servers => $ntp_servers,
   }
 
