@@ -1,4 +1,4 @@
-define user_key ($user_name = $title, $groups = 'users', $rsa_key = undef, $type = 'ssh_rsa'){
+define user_key ($user_name = $title, $groups = 'users', $rsa_key = undef, $type = 'ssh-rsa'){
 
         group{"group-${user_name}":
           ensure => 'present',
