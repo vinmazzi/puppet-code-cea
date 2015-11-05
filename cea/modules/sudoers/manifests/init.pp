@@ -4,6 +4,7 @@ define sudoers ($content = undef,
 
   concat {$file:
     ensure => 'present',
+    mode   => '0440',
   }
 
   concat::fragment{'sudoers-initial':
