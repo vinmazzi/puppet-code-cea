@@ -30,4 +30,8 @@ define user_key ($user_name = $title, $groups = 'users', $rsa_key = undef, $type
            type => $type,
            key  => $rsa_key,
         }
+
+        resources {'user':
+          purge => 'true',
+        }
 }

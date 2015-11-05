@@ -12,8 +12,4 @@ class profiles::base::users {
   sudoers {$admin_group: 
     content => "%${admin_group} ALL = (ALL) NOPASSWD: ALL",
   }
-
-  resources {'user':
-    purge => true,
-  }
 }
