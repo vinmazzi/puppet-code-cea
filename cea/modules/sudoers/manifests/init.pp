@@ -1,22 +1,17 @@
-define sudoers ($content = undef,
-                $file    = '/etc/sudoers',
-){
+class sudoers::conf ($file   = $sudoers::params::file_name,
+                     $source = $sudoers::params::source_file,
+                     $mode   = $sudoers::params::default_mode,
 
-  concat {"${file}-${content}":
+)inherits sudoers::params{
+
+  concat {$file:
     ensure => 'present',
-    mode   => '0440',
+    mode   => $mode,
   }
 
-  concat::fragment{"sudoers-initial-${content}":
+  concat::fragment{'sudoers-initial':
     target => $file,
     order  => 01,
-    source => "puppet:///modules/sudoers/sudoers_01.conf",
+    source => $source, 
   }
-
-  concat::fragment{"sudoers-${content}":
-    target  => $file,
-    order   => '20',
-    content => $content,
-  }
-
 }

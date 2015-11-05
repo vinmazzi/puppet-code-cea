@@ -4,7 +4,7 @@ class profiles::base::teste_app {
     ensure => 'present',
   } 
 
-  sudoers {'teste-app':
+  sudoers::conf {'teste-app':
     content => "teste-app ALL = (ALL) NOPASSWD: ALL",
   }
 }
