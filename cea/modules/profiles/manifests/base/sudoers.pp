@@ -1,5 +1,5 @@
 class profiles::base::sudoers {
 
-  class {'::sudoers': }
+  class {'sudoers': }
 
 }

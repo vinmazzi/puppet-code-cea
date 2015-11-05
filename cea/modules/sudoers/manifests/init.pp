@@ -1,4 +1,4 @@
-class sudoers::conf ($file   = $sudoers::params::file_name,
+class sudoers ($file   = $sudoers::params::file_name,
                      $source = $sudoers::params::source_file,
                      $mode   = $sudoers::params::default_mode,
 
