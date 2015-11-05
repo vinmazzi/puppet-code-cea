@@ -4,4 +4,5 @@ class profiles::base::cea {
     -> class {'profiles::base::ntp': } 
     -> class {'profiles::base::users': } 
   anchor{'end': }
+
 }
