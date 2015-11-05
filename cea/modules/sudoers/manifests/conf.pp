@@ -3,6 +3,7 @@ define sudoers::conf ($content = undef,
 ){
   concat::fragment{"sudoers-${content}":
     target  => $file,
-    content => $content,
+    content => "\n${content}",
+    order   => '99',
   }
 }
