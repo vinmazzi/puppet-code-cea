@@ -1,6 +1,7 @@
 Facter.add('tag') do
 	setcode do
-		case osfamily
+		os = Facter.value(:osfamily)
+		case os
 		when "Suse"
 			hostname_tmp = %x{'hostname --fqdn'}
 		when "Redhat"
