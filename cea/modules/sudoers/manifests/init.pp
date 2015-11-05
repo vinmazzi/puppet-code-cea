@@ -8,7 +8,7 @@ define sudoers ($content = undef,
 
   concat::fragment{'sudoers-initial':
     target => $file,
-    orger  => 01,
+    order  => 01,
     source => "puppet:///modules/sudoers/sudoers_01.conf",
   }
 
