@@ -1,5 +1,4 @@
-define sudoers ($name    = $title,
-                $content = undef,
+define sudoers ($content = undef,
                 $file    = '/etc/sudoers',
 ){
 
