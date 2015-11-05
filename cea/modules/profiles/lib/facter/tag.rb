@@ -3,7 +3,7 @@ Facter.add('tag') do
 		os = Facter.value(:osfamily)
 		case os
 		when "Suse"
-			hostname_tmp = %x{'/bin/hostname --fqdn'}
+			hostname_tmp = %x{/bin/hostname --fqdn}
 		when "Redhat"
 			hostname_tmp = %x{'hostname'}
 		end
