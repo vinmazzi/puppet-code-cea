@@ -2,7 +2,7 @@ define sudoers ($content = undef,
                 $file    = '/etc/sudoers',
 ){
 
-  concat {$file-$content:
+  concat {"${file}-${content}":
     ensure => 'present',
     mode   => '0440',
   }
