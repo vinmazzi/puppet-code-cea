@@ -1,7 +1,6 @@
-define sudoers ($type   ='user',
-                $name   =$title,
-                $content=undef,
-                $file   ='/etc/sudoers',
+define sudoers ($name    = $title,
+                $content = undef,
+                $file    = '/etc/sudoers',
 ){
 
   concat {$file:
