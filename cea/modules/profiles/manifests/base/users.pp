@@ -10,8 +10,8 @@ class profiles::base::users {
   create_resources(user_key,$admin_users)
   
   sudoers::conf {$admin_group: 
-    content => "ALL = (ALL) NOPASSWD: ALL",
-    type    => "grooup",
+    content => 'ALL = (ALL) NOPASSWD: ALL',
+    type    => 'group',
   }
 
   resources {'user':
