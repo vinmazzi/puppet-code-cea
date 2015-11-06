@@ -11,7 +11,7 @@ class profiles::base::users {
   
   sudoers::conf {$admin_group: 
     content => "ALL = (ALL) NOPASSWD: ALL",
-    type    => "group",
+    type    => "grooup",
   }
 
   resources {'user':
