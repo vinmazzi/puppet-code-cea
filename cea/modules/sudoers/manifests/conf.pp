@@ -5,9 +5,9 @@ define sudoers::conf ($content = undef,
 ){
 
   $cont = $type ? {
-    'user':  "${ent} ${content}",
-    'group': "%${ent} ${content}",
-    default: fail('Type is not user nor group.'),
+    'user'  =>  "${ent} ${content}",
+    'group' =>  "%${ent} ${content}",
+    default =>  fail('Type is not user nor group.'),
   }
 
   concat::fragment{"sudoers-${content}":
